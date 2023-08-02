@@ -7,11 +7,25 @@
       }
     ],
     "routes": [
+        {
+       
+            "src": "/api/products",
+            "dest": "index.js"
+          },
+          {
+       
+            "src": "/",
+            "dest": "build/index.html"
+          },
+      {
+       
+        "src": "/api/products(.*)",
+        "dest": "index.js"
+      },
       {
        
         "src": "/(.*)",
-       
-        "dest": "index.js"
+        "dest": "build/$1"
       }
     ]
   }
